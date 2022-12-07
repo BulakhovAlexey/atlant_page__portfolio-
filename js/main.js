@@ -41,7 +41,7 @@ volumeButtons.forEach((btn, index) => {
     this.classList.add("active");
     document.querySelector(
       ".volume__image"
-    ).style.background = `url(../img/${index}.png) no-repeat center`;
+    ).style.background = `url(/img/${index}.png) no-repeat center`;
     document.querySelector(".volume__image").style.backgroundSize = "contain";
   };
 });

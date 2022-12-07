@@ -188,7 +188,6 @@ html {
 }
 .bg_image {
     max-width: 765px;
-    /* height: 477px; */
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
     position: absolute;
     left: 50%;
