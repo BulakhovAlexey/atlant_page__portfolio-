@@ -1,4 +1,4 @@
-// плавнфый скрол к ссылкам
+// плавный скрол к ссылкам
 (function () {
   const smoothScroll = function (targetEl, duration) {
     let target = document.querySelector(targetEl);
@@ -33,7 +33,7 @@
   scrollTo();
 })();
 
-// блок Volume
+// изменение картинки в блоке Volume
 let volumeButtons = document.querySelectorAll(".volume_item_btn");
 volumeButtons.forEach((btn, index) => {
   btn.onclick = function () {
@@ -69,7 +69,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-//block callback
+//анимация блока callback
 let questionBtns = document.querySelectorAll(".questions_block__link");
 questionBtns.forEach((btn, indexBtn) => {
   btn.onclick = function () {
@@ -90,7 +90,7 @@ function validateUserPhone(phone) {
   return reg.test(String(phone));
 }
 
-// функция проверки на пустые поля и корректный номер телефона
+// функция проверки на пустые поля и валидный номер телефона
 function validateEmptyFields(inputClassName, userPhoneIdName) {
   let formInputs = document.querySelectorAll(inputClassName);
   let userPhoneVal = document.getElementById(userPhoneIdName).value;
