@@ -21,14 +21,18 @@
           <div class="header__inner">
             <div class="header__logo">
               <div class="logo__box">
-                <img src="img/svg/logo_start.svg" alt="" class="logo" />
+                <a href=""
+                  ><img src="img/svg/logo_start.svg" alt="" class="logo" />
+                </a>
               </div>
               <p class="header__text">Расправь плечи в теплом доме</p>
             </div>
             <div class="header__callback">
-              <p class="callback_num">+7 926 330-68-34</p>
+              <a href="tel:+79263306834" class="callback_num"
+                >+7 926 330-68-34</a
+              >
               <p class="callback_question">
-                <a href="#!"> Срочный вопрос</a>
+                <a href="#callback_block" class="js-scroll"> Срочный вопрос</a>
               </p>
             </div>
           </div>
@@ -92,7 +96,7 @@
         <div class="container">
           <h2 class="price__title">Стоимость газа в ваш газгольдер сегодня</h2>
           <div class="price__inner">
-            <div class="price__item">
+            <div class="price__item one">
               <h4 class="item_title">Пропан</h4>
               <h5 class="item_sub_title">от 25 рублей за литр</h5>
               <p class="item_desc">
@@ -119,7 +123,7 @@
                 <img src="img/truck_price.png" alt="" class="item_center_pic" />
               </div>
             </div>
-            <div class="price__item">
+            <div class="price__item two">
               <h4 class="item_title">Бутан</h4>
               <h5 class="item_sub_title">от 16 рублей за литр</h5>
               <p class="item_desc">
@@ -490,7 +494,9 @@
                   name="userQuestion"
                   id="userQuestion"
                 />
-                <button type="submit" class="submit_btn">Задать вопрос</button>
+                <button type="submit" class="submit_btn scroll_btn">
+                  Задать вопрос
+                </button>
               </form>
             </div>
             <div class="callback_photo">
@@ -508,34 +514,34 @@
             </div>
           </div>
           <div class="callback__companies_list">
-            <div class="list_item">
+            <div class="list_item left start_third">
               <img
                 src="img/роснефть 1.png"
                 alt="rosneft"
                 class="company_thumb"
               />
             </div>
-            <div class="list_item">
+            <div class="list_item left start_second">
               <img
                 src="img/башнефть.png"
                 alt="bashneft"
                 class="company_thumb"
               />
             </div>
-            <div class="list_item">
+            <div class="list_item left start_first">
               <img
                 src="img/транснефть.png"
                 alt="transneft"
                 class="company_thumb"
               />
             </div>
-            <div class="list_item">
+            <div class="list_item right start_first">
               <img src="img/газпром.png" alt="gazProm" class="company_thumb" />
             </div>
-            <div class="list_item">
+            <div class="list_item right start_second">
               <img src="img/лукойл.png" alt="Lukoil" class="company_thumb" />
             </div>
-            <div class="list_item">
+            <div class="list_item right start_third">
               <img src="img/татнефть.png" alt="TAT" class="company_thumb" />
             </div>
           </div>
@@ -543,7 +549,11 @@
             Закажи прямо сейчас и получи бесплатную установку телеметрии﻿
           </h2>
           <div class="volume__button">
-            <a href="#popup" class="get_gas_sec js-get-gas">Заказать газ</a>
+            <a
+              href="#popup"
+              class="get_gas_sec js-get-gas this_button_for_start"
+              >Заказать газ</a
+            >
           </div>
         </div>
       </div>

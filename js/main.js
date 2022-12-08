@@ -1,3 +1,13 @@
+// появление стартовой картинки
+window.onload = () => {
+  setTimeout(startBlockOnLoad, "500");
+};
+function startBlockOnLoad() {
+  document.querySelector(".bg_image").classList.add("start_block_active");
+  document
+    .querySelector(".delivery_block__inner")
+    .classList.add("start_block_active");
+}
 // плавный скрол к ссылкам
 (function () {
   const smoothScroll = function (targetEl, duration) {
@@ -145,4 +155,28 @@ form2.onsubmit = function (e) {
 let backBtn = document.querySelector(".backBtn");
 backBtn.addEventListener("click", () => {
   thankYou.classList.remove("active_thankYou");
+});
+
+// добавление класса группе элементов
+function addClass(el, className) {
+  let items = document.querySelectorAll(el);
+  items.forEach((item) => {
+    item.classList.add(className);
+  });
+}
+// функция появления логотипов
+function addLogos() {
+  setInterval(addClass, "300", ".start_first", "hide");
+  setInterval(addClass, "700", ".start_second", "hide");
+  setInterval(addClass, "1100", ".start_third", "hide");
+}
+// событие появления логотипов
+window.addEventListener("scroll", () => {
+  let start = document.querySelector(".callback_block");
+  if (
+    window.pageYOffset + start.getBoundingClientRect().top <
+    window.pageYOffset
+  ) {
+    addLogos();
+  }
 });

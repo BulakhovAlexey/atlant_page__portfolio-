@@ -192,10 +192,21 @@ html {
     position: absolute;
     left: 50%;
     background: rgb(19,132,236);
-    background: linear-gradient(90deg, rgba(19,132,236,0.3) -29%, rgba(34,34,34,1) 75%)
+    background: linear-gradient(90deg, rgba(19,132,236,0.3) -29%, rgba(34,34,34,1) 75%);
+    transform: translateX(150%);
+    transition-delay: 5s;
+    transition: all 1.5s;
 }
 .delivery_block__inner {
     z-index: 1;
+    opacity: 0;
+}
+.start_block_active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.5s;
+    transition-duration: 2s;
+
 }
 .weather_mini_block {
     margin:2.25rem -1.0625rem 0 -1.0625rem;
@@ -284,7 +295,7 @@ html {
 }
 .price__title {
     padding-top: 2.875rem;
-    margin-bottom: 76px;
+    margin-bottom: 4.75rem;
     font-size: 2.25rem;
     line-height: 2.6875rem;
     text-align: center;
@@ -517,7 +528,7 @@ html {
     border-radius: 20px;
     padding: 0.625rem 0;
     margin: 0.9375rem 0.625rem 2.5rem 0.625rem;
-    min-width: 164px;
+    min-width: 120px;
     transition: all 0.5s;
 }
 .active {
@@ -614,7 +625,7 @@ html {
     bottom: -48px;
 }
 .swiper-pagination-bullet{
-    width: 61px;
+    width: 3.813rem;
     height: 1.125rem;
     background: rgba(241, 241, 241, 0.2);
     border-radius: 20px;
@@ -823,6 +834,12 @@ input::placeholder {
     margin-left: 8px;
     margin-right: 8px;
 }
+.left {
+    transform: translateX(-1000%);
+}
+.right {
+    transform: translateX(1000%);
+}
 .get_gas_now {
     text-align: center;
     font-size: 2.25rem;
@@ -844,7 +861,6 @@ input::placeholder {
 
 .our_office__inner {
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: 1.25rem;
     background: #F1F1F1;
     box-shadow: 0px 0px 1.25rem rgba(0, 0, 0, 0.25);
@@ -1085,9 +1101,13 @@ input::placeholder {
     color: var(--text_white);
 }
 
-/* class error */
+/* other classes */
 .error {
     border: 1px solid red;
+}
+.hide {
+    transform: translateX(0);
+    transition: all 1.5s;
 }
 
 /* media */
@@ -1133,7 +1153,7 @@ input::placeholder {
         flex-wrap: wrap;
     }
     .slide_photo {
-        min-width: 70px;
+        min-width: 30px;
         flex: 1 1 100%;
         margin: 0 auto;
     }
@@ -1148,11 +1168,28 @@ input::placeholder {
     .bg_image {
         display: none;
     }
+    .price__inner {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 500px;
+    }
     .price__item {
-        grid-column: span 3;
+        text-align: center;
+        height: 190px;
+    }
+    .item_bnt {
+        margin: auto auto 0 auto;
+    }
+    .one {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    } 
+    .two {
+        grid-row: 2 / 3;
+        grid-column: 3 / 5;
     }
     .item_center {
-        grid-column: span 4;
+        grid-column: 1 / 5;
         margin-top: 20px;
     }
     .benefits__item {
@@ -1165,11 +1202,27 @@ input::placeholder {
     .benefits__guarantee__desc{
         grid-column: span 8;
     }
-    .our_office__map {
-        flex: 1 1 100%;
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+    .swiper-slide {
+        padding: 20px;
+    }
+    .slide_photo {
+        flex: 0 1 40%;
+    }
+    .our_office__inner {
+        display: inline-block;
+        background-color: transparent;
+    }
+    .our_office__body {
+        margin-bottom: 33px;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 10px;
     }
     .map {
-        border-radius: 0 0 33px 33px;
+        border-radius:33px;
     }
     .number__inner {
         margin-bottom: 20px;
