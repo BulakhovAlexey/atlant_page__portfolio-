@@ -11,8 +11,9 @@ function startBlockOnLoad() {
 // плавный скрол к ссылкам
 (function () {
   const smoothScroll = function (targetEl, duration) {
+    const headerElHeight = document.querySelector(".header").clientHeight;
     let target = document.querySelector(targetEl);
-    let targetPosition = target.getBoundingClientRect().top;
+    let targetPosition = target.getBoundingClientRect().top - headerElHeight;
     let startPosition = window.pageYOffset;
     let startTime = null;
 
@@ -108,6 +109,7 @@ function validateEmptyFields(inputClassName, userPhoneIdName) {
     (input) => input.value === ""
   );
   formInputs.forEach((input) => {
+    input.value = input.value.trim();
     if (input.value == "") {
       input.classList.add("error");
     } else {
@@ -130,7 +132,7 @@ function validateEmptyFields(inputClassName, userPhoneIdName) {
 let form1 = document.querySelector(".form_input");
 let thankYou = document.getElementById("popup_thankYou");
 form1.onsubmit = function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   if (!validateEmptyFields(".js-input", "userPhone")) {
     return false;
   } else {
@@ -142,7 +144,7 @@ form1.onsubmit = function (e) {
 // обработка сабмита form2
 let form2 = document.querySelector(".popup_form_input");
 form2.onsubmit = function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   if (!validateEmptyFields(".popup-input", "CallBackUserPhone")) {
     return false;
   } else {
@@ -166,9 +168,9 @@ function addClass(el, className) {
 }
 // функция появления логотипов
 function addLogos() {
-  setInterval(addClass, "300", ".start_first", "hide");
-  setInterval(addClass, "700", ".start_second", "hide");
-  setInterval(addClass, "1100", ".start_third", "hide");
+  setInterval(addClass, "100", ".start_first", "unHide");
+  setInterval(addClass, "600", ".start_second", "unHide");
+  setInterval(addClass, "1000", ".start_third", "unHide");
 }
 // событие появления логотипов
 window.addEventListener("scroll", () => {

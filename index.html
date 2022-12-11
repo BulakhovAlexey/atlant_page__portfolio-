@@ -103,8 +103,8 @@
                 Физически испарение происходит до -40 градусов, что позволяет
                 использовать его в наших с вами погодных условиях
               </p>
-              <div class="item_bnt">
-                <a href="#!" class="item_link">Заказать</a>
+              <div class="item_bnt js-get-gas">
+                <a href="#popup" class="item_link">Заказать</a>
               </div>
             </div>
             <div class="item_center">
@@ -131,7 +131,7 @@
                 использования в тёплое время года
               </p>
               <div class="item_bnt">
-                <a href="#!" class="item_link">Заказать</a>
+                <a href="#popup" class="item_link js-get-gas">Заказать</a>
               </div>
             </div>
           </div>
@@ -549,11 +549,7 @@
             Закажи прямо сейчас и получи бесплатную установку телеметрии﻿
           </h2>
           <div class="volume__button">
-            <a
-              href="#popup"
-              class="get_gas_sec js-get-gas this_button_for_start"
-              >Заказать газ</a
-            >
+            <a href="#popup" class="get_gas_sec js-get-gas">Заказать газ</a>
           </div>
         </div>
       </div>
@@ -597,56 +593,39 @@
         </div>
       </div>
       <div class="popup" id="popup">
-        <div class="container">
-          <div class="popup__inner">
-            <div class="popup__body">
-              <div class="popup__body_title">Доставим газ за 4 часа</div>
-              <a href="#header" class="popup__body_close"></a>
-            </div>
-            <form action="#!" class="popup_form_input">
-              <input
-                type="text"
-                name="callBackUserName"
-                placeholder="Имя"
-                id="callBackUserName"
-                class="popup-input"
-              />
-              <input
-                type="tel"
-                name="CallBackUserPhone"
-                placeholder="телефон"
-                id="CallBackUserPhone"
-                class="popup-input"
-              />
-              <button type="submit" class="popup__get_delivery_btn">
-                <div class="get_delivery">Заказать доставку газа</div>
-              </button>
-            </form>
+        <div class="popup__inner">
+          <div class="popup__body">
+            <div class="popup__body_title">Доставим газ за 4 часа</div>
+            <a href="#header" class="popup__body_close"></a>
           </div>
-          <div class="popup__policity">
-            <p class="policity__text">
-              Нажимая на кнопку, вы даёте согласие на обработку персональных
-              данных и соглашаетесь с условиями политики конфиденциальности
-            </p>
-          </div>
+          <form action="#!" class="popup_form_input">
+            <input
+              type="text"
+              name="callBackUserName"
+              placeholder="Имя"
+              id="callBackUserName"
+              class="popup-input"
+            />
+            <input
+              type="tel"
+              name="CallBackUserPhone"
+              placeholder="телефон"
+              id="CallBackUserPhone"
+              class="popup-input"
+            />
+            <button type="submit" class="popup__get_delivery_btn">
+              <div class="get_delivery">Заказать доставку газа</div>
+            </button>
+          </form>
+        </div>
+        <div class="popup__policity">
+          <p class="policity__text">
+            Нажимая на кнопку, вы даёте согласие на обработку персональных
+            данных и соглашаетесь с условиями политики конфиденциальности
+          </p>
         </div>
       </div>
       <div class="popup_thankYou popup" id="popup_thankYou">
-        <header class="header" id="header">
-          <div class="container">
-            <div class="header__inner">
-              <div class="header__logo">
-                <img src="img/svg/logo_start.svg" alt="" class="logo" />
-              </div>
-              <div class="header__callback">
-                <p class="callback_num">+7 926 330-68-34</p>
-                <p class="callback_question">
-                  <a href="#!"> Срочный вопрос</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </header>
         <div class="popup_thankYou__body">
           <h2 class="popup_thankYou__title">Спасибо за обращение</h2>
           <p class="popup_thankYou__text">
