@@ -11,7 +11,7 @@ function startBlockOnLoad() {
 // плавный скрол к ссылкам
 (function () {
   const smoothScroll = function (targetEl, duration) {
-    const headerElHeight = document.querySelector(".header").clientHeight;
+    let headerElHeight = document.querySelector(".header").clientHeight;
     let target = document.querySelector(targetEl);
     let targetPosition = target.getBoundingClientRect().top - headerElHeight;
     let startPosition = window.pageYOffset;
@@ -132,7 +132,7 @@ function validateEmptyFields(inputClassName, userPhoneIdName) {
 let form1 = document.querySelector(".form_input");
 let thankYou = document.getElementById("popup_thankYou");
 form1.onsubmit = function (e) {
-  // e.preventDefault();
+  e.preventDefault();
   if (!validateEmptyFields(".js-input", "userPhone")) {
     return false;
   } else {
@@ -144,7 +144,7 @@ form1.onsubmit = function (e) {
 // обработка сабмита form2
 let form2 = document.querySelector(".popup_form_input");
 form2.onsubmit = function (e) {
-  // e.preventDefault();
+  e.preventDefault();
   if (!validateEmptyFields(".popup-input", "CallBackUserPhone")) {
     return false;
   } else {
@@ -173,10 +173,11 @@ function addLogos() {
   setInterval(addClass, "1000", ".start_third", "unHide");
 }
 // событие появления логотипов
+let headerElHeight = document.querySelector(".header").clientHeight;
 window.addEventListener("scroll", () => {
   let start = document.querySelector(".callback_block");
   if (
-    window.pageYOffset + start.getBoundingClientRect().top <
+    window.pageYOffset + start.getBoundingClientRect().top - headerElHeight <
     window.pageYOffset
   ) {
     addLogos();

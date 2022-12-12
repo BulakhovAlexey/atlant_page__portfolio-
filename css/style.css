@@ -664,6 +664,7 @@ header {
     background-color: var(--bg_blue);
     padding-bottom: 3.125rem;
     min-height: 40.625rem;
+    position: relative;
 }
 .questions_block__title {
     font-size: 2.25rem;
@@ -671,6 +672,10 @@ header {
     color: var(--text_blue);
     text-align: center;
     margin-bottom: 3.875rem;
+}
+.question_block__inner {
+    position: absolute;
+    width: 100%;
 }
 .question_inner {
     font-family: 'Open Sans';
@@ -703,7 +708,7 @@ header {
     transition: all 0.5s;
 }
 .line {
-    width: 100%;
+    max-width: 1140px;
     height: 1px;
     background-color: var(--text_white);
 }
@@ -737,7 +742,7 @@ header {
 /* Callback_block */
 
 .callback_block {
-    margin: 3.4375rem 0 4.0625rem 0;
+    margin: 2.4375rem 0 4.0625rem 0;
 }
 .callback_block__inner {
     display: flex;
@@ -794,7 +799,7 @@ input::placeholder {
     background-color: var(--text_blue);
     padding: 0.75rem 0;
     text-align: center;
-    margin-bottom: 3.125rem;
+    margin-bottom: 25px;
     min-width: 220px;
 }
 .callback_photo {
@@ -1042,6 +1047,10 @@ input::placeholder {
     margin: 0 auto;  
     margin-bottom: 2.875rem;
 }
+.get_delivery:hover, .goStart:hover {
+    Box-Shadow: 0px 0px 7px 5px rgba(39,73,211,0.48);
+    transition: all 0.5s;
+}
 .get_delivery {
     border-radius: 11px;
     padding: 1.25rem 0.625rem;
@@ -1124,8 +1133,7 @@ input::placeholder {
     transition: all 1.5s;
 }
 .get_gas:hover, .get_gas_sec:hover{
-    background: rgb(24, 32, 62);
-    background: linear-gradient(76deg, rgba(8,36,136,1) 13%, rgba(105,136,245,1) 87%);
+    Box-Shadow: 0px 0px 7px 3px rgba(245,245,245,0.48);
     transition: all, 0.8s;
 }
 .js-scroll:hover {
