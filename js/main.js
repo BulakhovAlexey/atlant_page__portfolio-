@@ -57,7 +57,6 @@ volumeButtons.forEach((btn, index) => {
   };
 });
 
-// slider
 const swiper = new Swiper(".swiper", {
   speed: 1000,
   initialSlide: 2,
